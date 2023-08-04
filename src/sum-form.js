@@ -8,12 +8,17 @@ export const sumForm = () => {
 
   const equalsButton = $('button', '=', {
     onclick: () => {
+      // TODO handle onsubmit instead onclick
       const result = Number(aInput.value) + Number(bInput.value);
       resultContainer.innerText = result;
     }
   });
 
-  return $('div', [
+  return $('form', {
+    onsubmit: e => {
+      e.preventDefault()
+    }
+  },  [
     aInput,
     '+',
     bInput,
