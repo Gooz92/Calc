@@ -1,3 +1,3 @@
-import { sumForm } from "./sum-form";
+import { sumForm } from './sum-form';
 
 document.body.appendChild(sumForm());

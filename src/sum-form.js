@@ -19,5 +19,5 @@ export const sumForm = () => {
     bInput,
     equalsButton,
     resultContainer
-  ])
-}
+  ]);
+};
