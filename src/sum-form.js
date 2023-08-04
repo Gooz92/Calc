@@ -16,7 +16,7 @@ export const sumForm = () => {
 
   return $('form', {
     onsubmit: e => {
-      e.preventDefault()
+      e.preventDefault();
     }
   },  [
     aInput,
