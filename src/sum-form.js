@@ -17,6 +17,6 @@ export const sumForm = () => {
     '+',
     bInput,
     $('button', '='),
-    resultContainer
+    resultContainer,
   ]);
 };
