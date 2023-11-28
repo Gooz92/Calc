@@ -6,14 +6,6 @@ export const sumForm = () => {
 
   const resultContainer = $('span');
 
-  const equalsButton = $('button', '=', {
-    onclick: () => {
-      // TODO handle onsubmit instead onclick
-      const result = Number(aInput.value) + Number(bInput.value);
-      resultContainer.innerText = result;
-    }
-  });
-
   return $('form', {
     onsubmit: e => {
       e.preventDefault();
@@ -22,7 +14,13 @@ export const sumForm = () => {
     aInput,
     '+',
     bInput,
-    equalsButton,
+    $('button', '=', {
+      onclick: () => {
+        // TODO handle onsubmit instead onclick
+        const result = Number(aInput.value) + Number(bInput.value);
+        resultContainer.innerText = result;
+      }
+    }),
     resultContainer
   ]);
 };
