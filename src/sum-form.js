@@ -1,21 +1,21 @@
 import $ from 'create-element';
 
 export const sumForm = () => {
-  const aInput = $('input');
-  const bInput = $('input');
+  const input1 = $('input');
+  const input2 = $('input');
 
   const resultContainer = $('span');
 
   return $('form', {
     onsubmit: e => {
       e.preventDefault();
-      const result = Number(aInput.value) + Number(bInput.value);
+      const result = Number(input1.value) + Number(input2.value);
       resultContainer.innerText = result;
     }
   },  [
-    aInput,
+    input1,
     '+',
-    bInput,
+    input2,
     $('button', '='),
     resultContainer,
   ]);
