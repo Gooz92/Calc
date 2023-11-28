@@ -9,18 +9,14 @@ export const sumForm = () => {
   return $('form', {
     onsubmit: e => {
       e.preventDefault();
+      const result = Number(aInput.value) + Number(bInput.value);
+      resultContainer.innerText = result;
     }
   },  [
     aInput,
     '+',
     bInput,
-    $('button', '=', {
-      onclick: () => {
-        // TODO handle onsubmit instead onclick
-        const result = Number(aInput.value) + Number(bInput.value);
-        resultContainer.innerText = result;
-      }
-    }),
+    $('button', '='),
     resultContainer
   ]);
 };
